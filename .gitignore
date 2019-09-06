@@ -1,0 +1,7 @@
+*.swp
+.idea
+/.idea/
+__pycache__
+/__pycache__/
+
+/model-container-recipes.iml
