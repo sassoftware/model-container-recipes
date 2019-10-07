@@ -9,8 +9,6 @@ Here are the types of model base images that are currently supported:
 * Python 3 base image is used for scoring Python 3 models
 * R base image is used for scoring R models
 
-**Note:** The SAS Micro Analytic Service Python (MASPY) base image is used for scoring SAS DS2 models and will be available with SAS Model Manager 15.3 in November 2019.
-
 ### Installation
 
 Use Git tools to download current project from the Git repository.  

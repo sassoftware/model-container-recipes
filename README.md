@@ -18,8 +18,6 @@ Here are the products and solutions that are currently supported:
 * Cloud Provider -- Google Cloud Platform, Amazon Web Services, Microsoft Azure
 * Base images for R, Python2, and Python3 
 
-**Note:** The SAS Micro Analytic Service (MASPY) base image and will be available with SAS Model Manager 15.3 in November 2019.
-
 It is recommended that the scripts be downloaded onto the same machine where SAS Viya is installed, and that the system user be set to `sas` instead of `root`. You can set the user to `sas` using the following command:
 ```
 $ su - sas

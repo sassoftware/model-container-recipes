@@ -2,6 +2,8 @@
 
 ## Getting Started
 
+**Note:** The SAS Micro Analytic Service Python (MASPY) base image is used for scoring SAS DS2 models and is not available in current version.
+
 1. Read the documentation from the parent directory and prepare the environment.
 
 2. Generate MASPY base image by running the following command:
