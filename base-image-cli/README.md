@@ -49,8 +49,8 @@ Assuming that the project has been downloaded and stored in the <b>/opt/sas/mode
 ```
 
 * For each base image generation and testing, see the documentation within the following folders:
-  - [Python 2 or 3](python_base/README.md)
-  - [R](r_base/README.md)
+  - [Python 2 or 3](python_base/)
+  - [R](r_base/)
 
 ## FAQs
 *None currently available.*

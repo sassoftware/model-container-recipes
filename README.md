@@ -93,9 +93,9 @@ We currently support 3 different Cloud Providers for use with our model containe
 * [Microsoft Azure](./Azure_configuration_guide.md)
 
 ### Properties Files
-If this is your first time using the utility, you must complete the required fields within the `config.properties` file. This file is located within the following directories: `base-image-cli` and `model-image-cli`. For more information, see the base image [README](./base-image-cli/README.md) and the model image [README](./model-image-cli/README.md).
+If this is your first time using the utility, you must complete the required fields within the `config.properties` file. This file is located within the following directories: `base-image-cli` and `model-image-cli`. For more information, see the [base image folder](base-image-cli/) and the [model image folder](model-image-cli/).
 
-If you have already configured your properties files, learn how to [create a base image](./base-image-cli/README.md) or [create and use a model image](./model-image-cli/README.md) by reviewing the respective READMEs.
+If you have already configured your properties files, learn how to [create a base image](base-image-cli/) or [create and use a model image](model-image-cli/) by reviewing the respective READMEs.
 
 ## License
 
