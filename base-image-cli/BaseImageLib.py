@@ -10,7 +10,6 @@ from CloudAzureLib import CloudAzureLib
 from CloudGCPLib import CloudGCPLib
 import traceback
 from shutil import copyfile
-from maspy_base import maspybase_lib
 from python_base import pythonbase_lib
 from r_base import rbase_lib
 
