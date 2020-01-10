@@ -8,6 +8,11 @@ echo Building model image for a test model in local...
 echo ====================
 cd model
 docker image build -t  test_model:latest .
+
+echo Removing container instance if exists...
+echo ====================
+docker container rm -f test_model
+
 cd ..
 echo    
 echo Starting container instance as a daemon...

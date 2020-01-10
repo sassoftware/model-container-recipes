@@ -5,7 +5,6 @@ This 'Base Image Creation' recipe is used to help users to generate the base con
 images, which can be used during model image generation.
 
 Here are the types of model base images that are currently supported:
-* Python 2 base image is used for scoring Python 2 models
 * Python 3 base image is used for scoring Python 3 models
 * R base image is used for scoring R models
 
@@ -49,7 +48,7 @@ Assuming that the project has been downloaded and stored in the <b>/opt/sas/mode
 ```
 
 * For each base image generation and testing, see the documentation within the following folders:
-  - [Python 2 or 3](python_base/)
+  - [Python 3](python_base/)
   - [R](r_base/)
 
 ## FAQs

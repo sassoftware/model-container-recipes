@@ -205,7 +205,9 @@ model<-load(modelfile)
 # -----------------------------------------------
 # Score the Model
 # -----------------------------------------------
-score<- predict(get(model), type="response", newdata=inputdata)
+
+# The value of the type depends on which algorithm is being used in the model
+score<- predict(get(model), type="vector", newdata=inputdata)
 
 # -----------------------------------------------
 # MERGING PREDICTED VALUE WITH MODEL INPUT VARIABLES

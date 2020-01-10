@@ -13,15 +13,15 @@
   optional arguments:
     -h, --help            show this help message and exit
     --version VERSION, -v VERSION
-                          Python Version: 2 or 3
+                          Python Version: 3
 
 ```
-Note: The default Python base image is built using Python 3, but you can specify the Python version as either 2 or 3 using the optional argument `--version`. 
+Note: The default Python base image is built using Python 3.
 
-Here is an example of generating a Python 2 base image and the resulting output:
+Here is an example of generating a Python 3 base image and the resulting output:
 
 ```
-$ python base_image_generation.py python --version 2
+$ python base_image_generation.py python --version 3
 Loading configuration properties...
 Login into AWS ECR...
 Login AWS ECR succeeded!
@@ -37,8 +37,8 @@ Creating AWS ECR repo...
 Checking remote repo python2-base in AWS ECR...
 Pushing to repo...
 Pushed. Please verify it at container repository
-Model image URL: 12345678.dkr.ecr.us-east-1.amazonaws.com/python2-base:latest
-Remote Image Url 12345678.dkr.ecr.us-east-1.amazonaws.com/python2-base:latest
+Model image URL: 12345678.dkr.ecr.us-east-1.amazonaws.com/python3-base:latest
+Remote Image Url 12345678.dkr.ecr.us-east-1.amazonaws.com/python3-base:latest
 Succeed.
 
 ```
@@ -63,11 +63,9 @@ The test script in the test folder does the following:
 ```
 
 ## Scope
-The current release of Python3 base image installs Miniconda 3 with Python 3.6.7.
+The current release of Python3 base image installs Miniconda 3 with Python 3.7.3
 If a user's Python model has to use specific version of Python 3, please refer to 
 Model Image Generation documentation to add extra dependencies in the requirements.json file under model content. 
-
-The current release of Python2 base image installs Miniconda 2 with Python 2.7.
 
 ## License
 

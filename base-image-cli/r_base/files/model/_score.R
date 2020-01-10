@@ -7,7 +7,7 @@
 args = commandArgs(trailingOnly=TRUE)
 
 if (length(args)<2) {
-  stop("Rscript score.R [model file] <inputfile> <outputfile>.n", call.=FALSE)
+  stop("Rscript _score.R [model file] <inputfile> <outputfile>.n", call.=FALSE)
 } else if (length(args)<3) {
   modelfile = ''
   inputfile = args[1]
@@ -35,7 +35,7 @@ model<-load(modelfile)
 # -----------------------------------------------
 # SCORE THE MODEL
 # -----------------------------------------------
-score<- predict(get(model), type="response", newdata=inputdata)
+score<- predict(get(model), type="vector", newdata=inputdata)
 
 # -----------------------------------------------
 # MERGING PREDICTED VALUE WITH MODEL INPUT VARIABLES

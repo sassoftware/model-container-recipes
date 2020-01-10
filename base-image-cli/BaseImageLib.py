@@ -188,8 +188,8 @@ def python(version):
         print("Error:", "Failed in configuration initialization")
         exit(1)
 
-    if version < 2 or version > 3:
-        print("Error:", "Incorrect Python major version. Should be 2 or 3")
+    if version < 3 or version > 3:
+        print("Error:", "Incorrect Python major version. Should be 3")
         exit(1)
 
     python_version = str(version)

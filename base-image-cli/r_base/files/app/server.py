@@ -41,7 +41,7 @@ def unzip_file(zip_file, dest):
 
 # find the first file which matches the pattern
 def find_file(suffix):
-    current_dir = os.path.dirname(os.path.abspath(__file__))
+    current_dir = os.getcwd()
     for file in os.listdir(current_dir):
         if file.endswith(suffix):
             filename = file
@@ -50,7 +50,7 @@ def find_file(suffix):
     return None
 
 
-def find_score_script(filename):
+def find_names_by_role(filename, role):
     var_file = find_file(filename)
     if var_file is None:
         return None
@@ -60,16 +60,24 @@ def find_score_script(filename):
 
         names = []
         for row in json_object:
-            if row['role'] == 'score':
+            if row['role'] == role:
                 names.append(row["name"])
         if names == []:
             return None
         return names
     else:
-        app.logger.info('Didnot find score script file: ' + filename)
+        app.logger.info('Didnot find any role: ' + role + ' in file: ' + filename)
         return None
 
+        
+def find_score_script(filename):
+    return find_names_by_role(filename, 'score')
 
+    
+def find_models(filename):
+    return find_names_by_role(filename, 'model')
+    
+    
 # setup model repository directory
 model_repo = '/pybox/model'
 if "model_repository" in os.environ:

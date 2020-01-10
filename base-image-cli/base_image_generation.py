@@ -25,9 +25,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Base Image Generation  CLI')
     subparsers = parser.add_subparsers(title="actions", dest="action")
 
-    parser_python= subparsers.add_parser("python", help="Generate python base image")
+    parser_python= subparsers.add_parser("python", help="Generate Python base image")
     # default is Python 3
-    parser_python.add_argument('--version','-v', help='Python Version: 2 or 3', type=int, default=3)
+    parser_python.add_argument('--version','-v', help='Python Version: 3', type=int, default=3)
 
     parser_r = subparsers.add_parser("r", help="Generate R base image")
 
