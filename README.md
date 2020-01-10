@@ -16,7 +16,7 @@ Here are the products and solutions that are currently supported:
 * Single tenant
 * Python 3.4+
 * Cloud Provider -- Google Cloud Platform, Amazon Web Services, Microsoft Azure
-* Base images for R, Python2, and Python3 
+* Base images for R and Python3 
 
 It is recommended that the scripts be downloaded onto the same machine where SAS Viya is installed, and that the system user be set to `sas` instead of `root`. You can set the user to `sas` using the following command:
 ```
