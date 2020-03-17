@@ -479,11 +479,11 @@ class ModelImageLib(object):
 
         # copy template to dest_folder
         if code_type == 'python' or code_type == 'Python':
-            template_folder_name = 'template-py'  # pyml-base
+            template_folder_name = 'template-py'  # python
         elif code_type == 'R' or code_type == 'r':
-            template_folder_name = 'template-r'  # r-base
+            template_folder_name = 'template-r'  # r
         else:  # default
-            template_folder_name = 'template'  # maspy-base
+            template_folder_name = 'template-py'  # python
 
         template_folder = os.path.join(self.cur_path, template_folder_name)
         if not os.path.exists(template_folder):
