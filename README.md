@@ -9,6 +9,8 @@
 ## Overview
 The scripts in this repository enable users to create base images for their models, as well as model container images built using these base images. The containerized model images can be validated and deployed as containers using Kubernetes with these tools. The Docker Container Registry and Google Container Registry cloud platforms are supported, and we are working toward supporting other cloud platforms, such as Amazon Web Services and Azure. 
 
+_**Note:** For information about creating base images for use with either SAS Model Manager or SAS Open Model Manager, see [Create Base Images](https://github.com/sassoftware/open-model-manager-resources/tree/master/addons#create-base-images) in the Open Model Manager Resources GitHub repository._ 
+
 ### Prerequisites
 Here are the products and solutions that are currently supported:
 * SAS Viya
@@ -16,7 +18,7 @@ Here are the products and solutions that are currently supported:
 * Single tenant
 * Python 3.4+
 * Cloud Provider -- Google Cloud Platform, Amazon Web Services, Microsoft Azure
-* Base images for R and Python3 
+* Base images for R and Python 3 
 
 It is recommended that the scripts be downloaded onto the same machine where SAS Viya is installed, and that the system user be set to `sas` instead of `root`. You can set the user to `sas` using the following command:
 ```
