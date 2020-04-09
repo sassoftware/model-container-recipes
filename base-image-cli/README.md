@@ -8,7 +8,7 @@ Here are the types of model base images that are currently supported:
 * Python 3 base image is used for scoring Python 3 models
 * R base image is used for scoring R models
 
-_**Note:** For information about creating base images for use with either SAS Model Manager or SAS Open Model Manager, see [Model Containerization](https://github.com/sassoftware/open-model-manager-resources/tree/master/addons#model-containerization) in the Open Model Manager Resources GitHub repository._ 
+_**Note:** For information about creating base images for use with either SAS Model Manager or SAS Open Model Manager, see [Create Base Images](https://github.com/sassoftware/open-model-manager-resources/tree/master/addons#create-base-images) in the Open Model Manager Resources GitHub repository._ 
 
 
 ### Installation
