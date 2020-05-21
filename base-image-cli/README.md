@@ -43,19 +43,22 @@ Assuming that the project has been downloaded and stored in the <b>/opt/sas/mode
   [AWS]
   * `access.key.id` - the Amazon Web Services (AWS) Access Key ID
   * `Secret.access.key` - the AWS Secret Access Key
-  * `region` - the region or zone selected  
+  * `region` - the region or zone selected
+  
+4. (Optional) To create base images and publish them to a private docker registry, copy the configuration properties from the `config_privatedocker.properties` file into the `config.properties` file and specify values for the properties.
 
-* For more information about the command line syntax, run the following command from the `base-image-cli` directory:
+
+For more information about command line syntax, run the following command from the `base-image-cli` directory:
 ```
   $ python base_image_generation.py -h
 ```
 
-* For each base image generation and testing, see the documentation within the following folders:
+For information about base image generation and testing, see the documentation within the following folders:
   - [Python 3](python_base/)
   - [R](r_base/)
 
 ## FAQs
-*None currently available.*
+_*None currently available.*_
 
 ## License
 
