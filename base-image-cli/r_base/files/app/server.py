@@ -119,16 +119,21 @@ def score(filename):
     os.chdir(subfolder)
 
     # search for score script
-    names = find_score_script('fileMetadata.json')
-    if names is None:
-        # find the first score script in the current then
-        score_file = '_score.R'
-        for file1 in os.listdir("."):
-            if file1.endswith("score.R") and file1 != score_file:
-                score_file = file1
-                break
+    # 1) search for ContainerWrapper.R
+    if os.path.isfile("ContainerWrapper.R"):
+        score_file = "ContainerWrapper.R"
     else:
-        score_file = names[0]
+        # 2) search for score code defined in fileMetadata.json
+        names = find_score_script('fileMetadata.json')
+        if names is None:
+            # 3) find the first score script in the current then
+            score_file = '_score.R'
+            for file1 in os.listdir("."):
+                if file1.endswith("score.R") and file1 != score_file:
+                    score_file = file1
+                    break
+        else:
+            score_file = names[0]
 
     if not os.path.isfile(score_file):
         app.logger.info("Please prepare a score script and define it as script code!")
