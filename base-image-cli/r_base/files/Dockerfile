@@ -15,6 +15,7 @@ RUN conda install -y r-base
 RUN Rscript -e "install.packages('rpart',repos='http://cran.us.r-project.org')"
 RUN Rscript -e "install.packages('RCurl',repos='http://cran.us.r-project.org')"
 RUN Rscript -e "install.packages('jsonlite',repos='http://cran.us.r-project.org')"
+RUN Rscript -e "install.packages('argparse',repos='http://cran.us.r-project.org')"
 
 WORKDIR /pybox/app
 

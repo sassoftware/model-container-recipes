@@ -38,9 +38,14 @@ echo
 echo Upload sample data to perform scoring in the container...
 echo ====================
 execution_id=`curl -s --form file=@test.csv --form press=OK localhost:8188/executions | jq -r '.id'`
-echo    
+# remove the trailing spaces
+execution_id=`echo $execution_id | sed -e 's/\r//g'`
+
+echo
 echo execution id is $execution_id
+echo sleep 5s for execution
 echo ====================
+sleep 5
 
 echo    
 echo Getting result back if execution succeeds...

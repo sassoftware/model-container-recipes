@@ -28,7 +28,7 @@ python -W ignore <score filename> [-m <pickle filename>] -i <input csv filename>
 
 ### R
 ```
-Rscript <score filename> [model filename] <input csv filename> <output csv filename> >> <log filename> 2>&1
+Rscript <score filename> [-m <model filename>] -i <input csv filename> -o <output csv filename> >> <log filename> 2>&1
 ```
 
 ## Sample
@@ -174,23 +174,22 @@ You can copy part of the following sample script and add support for argument pa
 # If the RDA model file has not been specified in command-line arguments, the script
 # looks for the first RDA file in the current directory, and the script quits if the file is not found.
 
-args = commandArgs(trailingOnly=TRUE)
+suppressPackageStartupMessages(library("argparse"))
 
-if (length(args)<2) {
-  stop("Rscript score.R [model file] <inputfile> <outputfile>.n", call.=FALSE)
-} else if (length(args)<3) {
-  modelfile = ''
-  inputfile = args[1]
-  outputfile = args[2]
-} else {
-  modelfile = args[1]
-  inputfile = args[2]
-  outputfile = args[3]
-}
+parser <- ArgumentParser()
+parser$add_argument("-m", "--model", help="model filename")
+parser$add_argument("-i", "--input", help="input filename")
+parser$add_argument("-o", "--output", help="output filename")
+args <- parser$parse_args()
+
+modelfile <- args$model
+inputfile <- args$input
+outputfile <- args$output
 
 inputdata <- read.csv(file=inputfile, header=TRUE, sep=",")
 
-if (modelfile == '') {
+if (is.null(modelfile)) {
+  # search for model file
   files <- list.files(pattern = "\\.rda$")
 
   if(length(files) == 0) {

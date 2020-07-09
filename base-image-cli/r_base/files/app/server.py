@@ -139,7 +139,7 @@ def score(filename):
         app.logger.info("Please prepare a score script and define it as script code!")
         return "-1"
 
-    command_str = 'Rscript ' + score_file + ' ' + filename + ' ' + output_file
+    command_str = 'Rscript ' + score_file + ' -i ' + filename + ' -o ' + output_file
 
     f = open(log_file,"w+")
     f.write("Scoring...\n")
