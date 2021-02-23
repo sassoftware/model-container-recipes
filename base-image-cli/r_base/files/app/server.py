@@ -165,6 +165,20 @@ def ping():
     return return_text("pong")
 
 
+@app.route('/swagger.json', methods=['GET'])
+def swagger():
+    with open('./swagger.json') as f:
+      data = json.load(f)
+      resp = jsonify(data)
+      resp.status_code = 200
+      return resp
+
+    testdata = {'message':'not found swagger.json'}
+    resp = jsonify(testdata)
+    resp.status_code = 404
+    return resp
+
+
 @app.route('/executions', methods=['POST'])
 def batch():
     """
