@@ -5,7 +5,7 @@ LABEL Python score box - base
 USER root
 
 RUN pip install --upgrade pip; \
-    pip install dill numpy jsonify pandas scipy sklearn; \
+    pip install dill numpy jsonify pandas scipy sklearn statsmodels; \
     pip install flask gunicorn;
 
 WORKDIR /pybox/app
