@@ -49,7 +49,7 @@ The test script in the test folder does the following:
     
 ```
   $ cd model-container-recipes
-  $ cd base-image-cli/python_base/test
+  $ cd base-image-cli/r_base/test
   $ chmod 755 test_model_image.sh
   $ ./test_model_image.sh  
 ```

@@ -141,7 +141,7 @@
         }
       }
     },
-    "/query/system/log": {
+    "/system/log": {
       "get": {
         "operationId": "getSystemLog",
         "summary": "Get the system log",
