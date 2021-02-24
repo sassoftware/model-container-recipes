@@ -4,6 +4,10 @@ LABEL Python score box - base
 
 USER root
 
+ENV PYTHON_VERSION 3.8
+
+RUN conda install -y python=${PYTHON_VERSION}
+
 RUN pip install --upgrade pip; \
     pip install dill numpy jsonify pandas scipy sklearn statsmodels; \
     pip install flask gunicorn;

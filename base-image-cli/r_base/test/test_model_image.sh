@@ -41,7 +41,7 @@ execution_id=`curl -s --form file=@test.csv --form press=OK localhost:8188/execu
 # remove the trailing spaces
 execution_id=`echo $execution_id | sed -e 's/\r//g'`
 
-echo    
+echo
 echo execution id is $execution_id
 echo sleep 5s for execution
 echo ====================
@@ -53,7 +53,13 @@ echo ====================
 curl -s -o result.csv localhost:8188/query/$execution_id
 curl -s -o result.log localhost:8188/query/$execution_id/log
 curl -s -o system.log localhost:8188/system/log
+curl -s -o swagger.json localhost:8188/swagger.json
 
+
+echo    
+echo Here is the swagger.json
+echo ====================
+head -5 swagger.json
 
 echo    
 echo Here is the results if the file is retrieved
@@ -79,6 +85,7 @@ docker container rm test_model
 rm -f result.csv
 rm -f result.log
 rm -f system.log
+rm -f swagger.json
 
 echo    
 echo Deleting image...
