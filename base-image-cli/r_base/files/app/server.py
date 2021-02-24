@@ -173,7 +173,8 @@ def swagger():
       resp.status_code = 200
       return resp
 
-    testdata = {'message':'not found swagger.json'}
+    testdata = {'message':'The swagger.json file could not be found.'}
+
     resp = jsonify(testdata)
     resp.status_code = 404
     return resp
