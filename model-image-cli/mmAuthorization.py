@@ -23,7 +23,7 @@ class mmAuthorization(object):
         """
 
     # TODO need hide password
-    def get_auth_token(self, url, user='brmdev', password='Go4thsas'):
+    def get_auth_token(self, url, user, password):
         headers = {
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded',
