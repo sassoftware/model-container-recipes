@@ -1,3 +1,5 @@
+Archive notice: This project is no longer under active development and was archived on 2024-10-17.
+
 # Model Container Recipes
 
 ### Contents
